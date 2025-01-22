@@ -1,25 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
 /*------------------------*\
  *BASE
 \*------------------------*/
-
 html{
     scroll-behavior: smooth;
 }
-
 body {
     @apply bg-zinc-900 text-zinc-50 ;
 
 }
-
 /*------------------------*\
  * COMPONENTS
 \*------------------------*/
-
 .menu-btn{
     @apply w-10 h-10 grid place-items-center bg-zinc-50/10 rounded-xl ring-inset ring-1 ring-zinc-50/[0.02] backdrop-blur-2xl hover:bg-zinc-50/15 transition-[transform,background-color] active:scale-95 ;
 }
@@ -37,11 +31,9 @@ body {
 .nav-link.active{
     @apply text-zinc-900 duration-500
 }
-
 .navbar  .active-box{
     @apply absolute  bg-zinc-50 rounded-lg -z-10 transition-[top,left] duration-500
 }
-
 .btn{
     @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium text-sm ring-1 ring-zinc-50/5 ring-inset transition-[background-color]
 }
@@ -65,4 +57,47 @@ body {
 
 .img-cover{
     @apply w-full h-full object-cover
+}
+.btn .material-symbols-rounded {
+    @apply text-[18px]
+}
+
+.btn:has( .material-symbols-rounded){
+    @apply pr-3
+}
+.btn-primary {
+    @apply h-11 bg-sky-400 text-zinc-950 hover:bg-sky-300 active:bg-sky-400;
+}
+
+.btn-outline{
+    @apply h-11 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800;
+}
+
+/*------------------------*\
+ * typography
+\*------------------------*/
+.headline-1,
+.headline-2
+{
+    @apply max-w-max ;
+    background: -webkit-linear-gradient(0deg, #fafafa, #a1a1a1, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+.headline-1{
+    @apply text-5xl leading-tight font-semibold lg:text-[55px] lg:leading-[1.15]
+}
+.headline-2{
+    @apply text-3xl lg:text-4xl lg:leading-tight font-semibold
+}
+
+.title-1{
+    @apply text-[22px] font-normal
+}
+
+/*------------------------*\
+ * about
+\*------------------------*/
+.section{
+    @apply pt-20 lg:pt-32
 }
