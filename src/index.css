@@ -58,6 +58,11 @@ body {
 .img-cover{
     @apply w-full h-full object-cover
 }
+
+.reveal-up{
+    @apply translate-y-20 opacity-0
+}
+
 .btn .material-symbols-rounded {
     @apply text-[18px]
 }
@@ -100,4 +105,19 @@ body {
 \*------------------------*/
 .section{
     @apply pt-20 lg:pt-32
+}
+
+
+
+
+/** text field*/
+.label{
+    @apply block text-zinc-200 text-sm font-normal mb-2
+}
+
+.text-field{
+    @apply block outline-none w-full px-3 py-3 text-sm bg-zinc-800 rounded-xl ring-1 ring-inset ring-transparent transition-shadow hover:ring-zinc-50/5 focus:ring-sky-400 focus:ring-2
+}
+.text-field::placeholder{
+    @apply text-zinc-400
 }
